@@ -1,73 +1,121 @@
-# React + TypeScript + Vite
+# NimbleGravity PT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Read this README in [English](#english) or [Spanish](#spanish).
 
-Currently, two official plugins are available:
+## English
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Description
+This is a job listing application built with React and TypeScript. It allows users to view job opportunities, connect with candidates, and manage job-related data.
 
-## React Compiler
+### Features
+- Job listing display
+- Candidate connection form
+- User profile header
+- Custom hooks for jobs and candidates
+- API integration
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Tech Stack
+- **Frontend**: React 19.2.0, TypeScript
+- **Build Tool**: Vite
+- **Linting**: ESLint
+- **Styling**: CSS
 
-## Expanding the ESLint configuration
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd nimblegravity-pt
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+3. Create a `.env` file based on `.env.example` and configure your environment variables.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Usage
+- Start the development server:
+  ```bash
+  npm run dev
+  ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Build for production:
+  ```bash
+  npm run build
+  ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Preview the production build:
+  ```bash
+  npm run preview
+  ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Lint the code:
+  ```bash
+  npm run lint
+  ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Project Structure
+- `src/components/`: React components (JobCard, JobList, ConnectForm, etc.)
+- `src/hooks/`: Custom hooks (useJobs, useCandidate)
+- `src/api.ts`: API functions
+- `src/types.ts`: TypeScript type definitions
+
+## Spanish
+
+### Descripción
+Esta es una aplicación de listado de trabajos construida con React y TypeScript. Permite a los usuarios ver oportunidades de empleo, conectarse con candidatos y gestionar datos relacionados con trabajos.
+
+### Características
+- Visualización de listados de trabajos
+- Formulario de conexión de candidatos
+- Encabezado de perfil de usuario
+- Hooks personalizados para trabajos y candidatos
+- Integración con API
+
+### Pila Tecnológica
+- **Frontend**: React 19.2.0, TypeScript
+- **Herramienta de Construcción**: Vite
+- **Linting**: ESLint
+- **Estilos**: CSS
+
+### Instalación
+1. Clona el repositorio:
+   ```bash
+   git clone <repository-url>
+   cd nimblegravity-pt
+   ```
+
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Crea un archivo `.env` basado en `.env.example` y configura tus variables de entorno.
+
+### Uso
+- Inicia el servidor de desarrollo:
+  ```bash
+  npm run dev
+  ```
+
+- Construye para producción:
+  ```bash
+  npm run build
+  ```
+
+- Previsualiza la construcción de producción:
+  ```bash
+  npm run preview
+  ```
+
+- Linta el código:
+  ```bash
+  npm run lint
+  ```
+
+### Estructura del Proyecto
+- `src/components/`: Componentes de React (JobCard, JobList, ConnectForm, etc.)
+- `src/hooks/`: Hooks personalizados (useJobs, useCandidate)
+- `src/api.ts`: Funciones de API
+- `src/types.ts`: Definiciones de tipos TypeScript
