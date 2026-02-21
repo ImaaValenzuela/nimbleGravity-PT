@@ -295,3 +295,45 @@ button:disabled {
   margin-top: 2rem;
   font-style: italic;
 }
+
+.signature-credits {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  z-index: 50;
+}
+
+.signature-credits:hover {
+  opacity: 1;
+}
+
+.signature-text {
+  letter-spacing: 0.05em;
+  font-weight: 300;
+}
+
+.signature-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.signature-links a {
+  color: inherit;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signature-links a:hover {
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}

@@ -5,6 +5,8 @@ import { useJobs } from './hooks/useJobs';
 import { ConnectForm } from './components/ConnectForm';
 import { HeaderProfile } from './components/HeaderProfile';
 import { JobList } from './components/JobList';
+import { SignatureCredits } from './components/SignatureCredits';
+
 
 export default function App() {
   const { candidate, isConnecting, authError, connect } = useCandidate();
@@ -27,28 +29,34 @@ export default function App() {
 
   if (!candidate) {
     return (
-      <ConnectForm
-        onConnect={connect}
-        isConnecting={isConnecting}
-        authError={authError}
-      />
+      <>
+        <ConnectForm
+          onConnect={connect}
+          isConnecting={isConnecting}
+          authError={authError}
+        />
+        <SignatureCredits />
+      </>
     );
   }
 
   return (
-    <div className="container">
-      <HeaderProfile candidate={candidate} />
+    <>
+      <div className="container">
+        <HeaderProfile candidate={candidate} />
 
-      <JobList
-        jobs={jobs}
-        isLoadingJobs={isLoadingJobs}
-        jobsError={jobsError}
-        submittingJobs={submittingJobs}
-        successJobs={successJobs}
-        jobErrors={jobErrors}
-        onApply={handleApply}
-        onRetry={loadJobs}
-      />
-    </div>
+        <JobList
+          jobs={jobs}
+          isLoadingJobs={isLoadingJobs}
+          jobsError={jobsError}
+          submittingJobs={submittingJobs}
+          successJobs={successJobs}
+          jobErrors={jobErrors}
+          onApply={handleApply}
+          onRetry={loadJobs}
+        />
+      </div>
+      <SignatureCredits />
+    </>
   );
 }
