@@ -23,7 +23,7 @@ This is a job listing application built with React and TypeScript. It allows use
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/ImaaValenzuela/nimbleGravity-PT.git
    cd nimblegravity-pt
    ```
 
@@ -82,7 +82,7 @@ Esta es una aplicación de listado de trabajos construida con React y TypeScript
 ### Instalación
 1. Clona el repositorio:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/ImaaValenzuela/nimbleGravity-PT.git
    cd nimblegravity-pt
    ```
 
