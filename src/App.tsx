@@ -5,6 +5,7 @@ import { useJobs } from './hooks/useJobs';
 import { ConnectForm } from './components/ConnectForm';
 import { HeaderProfile } from './components/HeaderProfile';
 import { JobList } from './components/JobList';
+import { SqlChallenge } from './components/SqlChallenge';
 import { SignatureCredits } from './components/SignatureCredits';
 
 
@@ -55,6 +56,8 @@ export default function App() {
           onApply={handleApply}
           onRetry={loadJobs}
         />
+
+        <SqlChallenge />
       </div>
       <SignatureCredits />
     </>
